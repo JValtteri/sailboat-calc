@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sail Calc</title>
+</head>
+
+<body id="body">
+    <div class="column-container">
+        <div class="title-line">
+            <h1>Sail Calc</h1>
+            <div class="buttons">
+                <button id="submit-button" class="focused">Calculate</button>
+                <button id="clear-button" disabled>Clear</button>
+                <button id="fullscreen" class="fullscreen">Fullscreen</button>
+                <button id="save" disabled>Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column-container">
+        <div class="column">
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <input type="text" id="boat-name" list="boat-names" value="" placeholder="boat name">
+                            <datalist id="boat-names">
+                                <option value="H-Vene">
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Length (LOA)</th>
+                        <td><input class="num-input" type="number" min="0." max="1000" step="0.5" id="length" value="8.31"> m</td>
+                    </tr>
+                    <tr>
+                        <th>Waterline (LWL)</th>
+                        <td><input class="num-input" type="number" min="0" max="1000" step="0.5" id="waterline" value="6.3"> m</td>
+                    </tr>
+                    <tr>
+                        <th>Beam</th>
+                        <td><input class="num-input" type="number" min="0" max="100" step="0.2" id="beam" value="2.19"> m</td>
+                    </tr>
+                    <tr>
+                        <th>Draft</th>
+                        <td><input class="num-input" type="number" min="0" max="50" step="0.2" id="draft" value="1.32"> m</td>
+                    </tr>
+                    <tr>
+                        <th>Sail Area</th>
+                        <td><input class="num-input" type="number" min="0" max="5000" step="1" id="sail-area" value="24.53"> m²</td>
+                    </tr>
+                    <tr>
+                        <th>Displacement</th>
+                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.100" id="displacement" value="1.447"> tkg</td>
+                    </tr>
+                    <tr>
+                        <th>Ballast</th>
+                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.050" id="ballast" value="0.723"> tkg</td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <div class="table-container">
+                <table id="output" hidden>
+                    <tr>
+                        <th>SA/Disp</th>
+                        <td class="output" id="sa-disp">-</td>
+                        <td>Cruiser: 15-20</td>
+                    </tr>
+                    <tr>
+                        <th>Ballast/Disp</th>
+                        <td class="output" id="bal-disp">-</td>
+                        <td>Cruiser: 40+</td>
+                    </tr>
+                    <tr>
+                        <th>Disp/Len</th>
+                        <td class="output" id="disp-len">-</td>
+                        <td>Easy: under 200</td>
+                    </tr>
+                    <tr>
+                        <th>Comfort ratio</th>
+                        <td class="output" id="comfort">-</td>
+                        <td>Bluewater: 30-40+</td>
+                    </tr>
+                    <tr>
+                        <th>Capsise</th>
+                        <td class="output" id="capsise">-</td>
+                        <td>Cruiser: 2 or less</td>
+                    </tr>
+                    <tr>
+                        <th>S#</th>
+                        <td class="output" id="s-factor">-</td>
+                        <td>Sport: 3+</td>
+                    </tr>
+                    <tr>
+                        <th>Hull speed (waterline)</th>
+                        <td class="output" id="hullspeed">-</td>
+                    </tr>
+                    <tr>
+                        <td>Hull speed (LOA)</th>
+                        <td class="output" id="hullspeed-loa">-</td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <footer class="footer">
+        <div class="footer-column" hidden>
+            <h4 class="footer-title">Source Code</h4>
+            <a href="https://github.com/JValtteri/sailboat-calc" class="footer-text">github.com/JValtteri/sailboat-calc</a>
+        </div>
+        <div class="footer-column" hidden>
+            <h4 class="footer-title">Data Retention</h4>
+            <input type="checkbox" id="accept">Remember Me
+            <div class="tooltip">
+                <span class="tooltip-trigger footer-text">Tell me more</span>
+                <div class="tooltiptext">
+                    <p>
+                        By checking the box "Remember Me", you allow your browser
+                        to save your calculations between sessions.
+                    </p>
+                    <p>
+                        This is done by storing cookies containing the information you have
+                        submitted. The cookies are not used for any other purpose.
+                    </p>
+                    <p>
+                        You can remove your cookie consent any time by unchecking the
+                        "Remember Me" checkbox or clearing the cookies through your browser.
+                    </p>
+                    <p>
+                        The server collects anonymous statistics on requests made to follow the
+                        load on the server and to diagnose any problems. Logs disappear on every
+                        server restart.
+                    </p>
+                </div>
+            </div>
+            <p>
+            </p>
+        </div>
+    </footer>
+</body>
+<script type="module" src="js/script.js"></script>
+</html>
+
