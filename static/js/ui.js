@@ -120,9 +120,9 @@ export function update() {
         updateCapsise();
         updateHullspeed();
         updateHullspeedLoa();
-        //updateSfactor();
-        //color.removeColors(factors);         // Remove any old colors
-        //color.setColors(factors);            // Set new colors
+        updateSfactor();
+        //color.removeColors();         // Remove any old colors
+        //color.setColors();            // Set new colors
     }
 }
 
@@ -154,6 +154,6 @@ function updateHullspeedLoa() {
     hullspeedLOA.textContent = calc.hullspeed(length.value).toFixed(2);
 }
 
-//function updateSfactor() {
-//    sfactor.textContent = calc.sFactor(displacement.value, waterline.value, sailArea.value).toFixed(2);
-//}
+function updateSfactor() {
+    sfactor.textContent = calc.sFactor(displacement.value, waterline.value, sailArea.value).toFixed(2);
+}

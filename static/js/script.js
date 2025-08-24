@@ -92,4 +92,4 @@ if (ui.cookieConsent.checked) {
     ui.activateUI();
 }
 
-//ui.update()
+ui.submit();
