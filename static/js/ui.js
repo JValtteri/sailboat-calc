@@ -8,6 +8,7 @@ import * as calc from "./calc.js"
 export const body                 = document.getElementById('body');
 // Inputs
 export const boatName           = document.getElementById('boat-name');
+export const boatLoad           = document.getElementById('boat-load');
 export const length             = document.getElementById('length');
 export const waterline          = document.getElementById('waterline');
 export const beam               = document.getElementById('beam');
@@ -32,9 +33,6 @@ const sfactor                   = document.getElementById('s-factor');
 export const outputTable        = document.getElementById("output");
 
 // Variables
-//let batteryType            = typeInput.value;
-
-let soc                    = null;
 
 let calculated = false;
 
@@ -42,6 +40,7 @@ let calculated = false;
 export const submitButton  = document.getElementById("submit-button");
 export const clearBtn      = document.getElementById('clear-button');
 export const fullscreenBtn = document.getElementById("fullscreen");
+export const loadBtn       = document.getElementById("load");
 export const saveBtn       = document.getElementById("save");
 
 
@@ -65,6 +64,14 @@ export function makeFullscreen() {
                                   .catch((TypeError) => {});
     if (cookieConsent.checked === true) {
         cookie.setCookie("fullscreen", "true", ttl*DAY);
+    }
+}
+
+export function isLoadBtnEnabled() {
+    if (boatLoad.value === "") {
+        loadBtn.setAttribute("disabled", "");
+    } else {
+        loadBtn.removeAttribute("disabled");
     }
 }
 
@@ -100,12 +107,29 @@ export function clear() {
     calculated = false;
 }
 
-function updateInputs() {
-    /*
-    batteryType            = typeInput.value;
-    voltage                = parseFloat(voltInput.value);
-    temperature            = parseFloat(tempInput.value);
-    */
+export function loadBoatSpecs(name) {
+    const boat          = util.getBoat(name);
+    boatName.value      = boat["name"];
+    length.value        = boat["length"];
+    waterline.value     = boat["waterline"];
+    beam.value          = boat["beam"];
+    draft.value         = boat["draft"];
+    sailArea.value      = boat["sa"];
+    displacement.value  = boat["displacement"];
+    ballast.value       = boat["ballast"];
+    update();
+    loadBtn.setAttribute("disabled", "");
+}
+
+export function updateBoats() {
+    const element = boatLoad;
+    util.clearOptions(element);
+    addSelect(element);
+    const localBoats = loadLocalBoats();
+    const serverBoats = loadServerBoats();
+    util.populateSelect(element, localBoats, util.optionInsert);
+    util.populateSelect(element, serverBoats, util.optionInsert);
+    // Enable Load Button
 }
 
 /* Updates all calculations
@@ -156,4 +180,29 @@ function updateHullspeedLoa() {
 
 function updateSfactor() {
     sfactor.textContent = calc.sFactor(displacement.value, waterline.value, sailArea.value).toFixed(2);
+}
+
+function updateInputs() {
+    /*
+    batteryType            = typeInput.value;
+    voltage                = parseFloat(voltInput.value);
+    temperature            = parseFloat(tempInput.value);
+    */
+}
+
+// Parse local storage to load boats to list
+function loadLocalBoats() {
+    console.log("local storage not implemented")
+}
+
+// Load boats from static json
+function loadServerBoats() {
+    return util.getBoats();
+}
+
+function addSelect(element) {
+    const option = document.createElement('option');
+    option.innerText = "select";
+    option.value = "";
+    element.appendChild(option);
 }

@@ -11,12 +11,38 @@
 <body id="body">
     <div class="column-container">
         <div class="title-line">
-            <h1>Sail Calc</h1>
+            <div class="logo-row">
+                <img src="img/logo.png" alt="battery logo">
+                <h1>Sailboat Calc</h1>
+            </div>
             <div class="buttons">
                 <button id="submit-button" class="focused">Calculate</button>
                 <button id="clear-button" disabled>Clear</button>
                 <button id="fullscreen" class="fullscreen">Fullscreen</button>
-                <button id="save" disabled>Save</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Save</th>
+                        <td>
+                            <input type="text" id="boat-name" list="boat-names" value="" placeholder="boat name">
+                        </td>
+                        <td>
+                            <button id="save" disabled>Save</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Load</th>
+                        <td>
+                            <select type="text" id="boat-load" list="boat-names" value="" placeholder="boat name" disabled>
+                                <option value="">select</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button id="load" disabled>Load</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -26,41 +52,32 @@
             <div class="table-container">
                 <table>
                     <tr>
-                        <th>Name</th>
-                        <td>
-                            <input type="text" id="boat-name" list="boat-names" value="" placeholder="boat name">
-                            <datalist id="boat-names">
-                                <option value="H-Vene">
-                            </datalist>
-                        </td>
-                    </tr>
-                    <tr>
                         <th>Length (LOA)</th>
                         <td><input class="num-input" type="number" min="0." max="1000" step="0.5" id="length" value="8.31"> m</td>
                     </tr>
                     <tr>
                         <th>Waterline (LWL)</th>
-                        <td><input class="num-input" type="number" min="0" max="1000" step="0.5" id="waterline" value="6.3"> m</td>
+                        <td><input class="num-input" type="number" min="0" max="1000" step="0.5" id="waterline" value="8.31"> m</td>
                     </tr>
                     <tr>
                         <th>Beam</th>
-                        <td><input class="num-input" type="number" min="0" max="100" step="0.2" id="beam" value="2.19"> m</td>
+                        <td><input class="num-input" type="number" min="0" max="100" step="0.2" id="beam" value="2.0785"> m</td>
                     </tr>
                     <tr>
                         <th>Draft</th>
-                        <td><input class="num-input" type="number" min="0" max="50" step="0.2" id="draft" value="1.32"> m</td>
+                        <td><input class="num-input" type="number" min="0" max="50" step="0.1" id="draft" value="1.4"> m</td>
                     </tr>
                     <tr>
                         <th>Sail Area</th>
-                        <td><input class="num-input" type="number" min="0" max="5000" step="1" id="sail-area" value="24.53"> m²</td>
+                        <td><input class="num-input" type="number" min="0" max="5000" step="1" id="sail-area" value="50.45"> m²</td>
                     </tr>
                     <tr>
                         <th>Displacement</th>
-                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.100" id="displacement" value="1.447"> tkg</td>
+                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.100" id="displacement" value="4.1187"> tkg</td>
                     </tr>
                     <tr>
                         <th>Ballast</th>
-                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.050" id="ballast" value="0.723"> tkg</td>
+                        <td><input class="num-input" type="number" min="0" max="900000000" step="0.050" id="ballast" value="1.6475"> tkg</td>
                     </tr>
                 </table>
                 <br>

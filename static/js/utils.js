@@ -2,7 +2,7 @@
  * Miscellanious functions
  */
 
-//import * as bat from "./boats.js"
+import * as boat from "./boats.js"
 
 /*
  * Low level page manipulation functions
@@ -41,7 +41,7 @@ export function base64(str) {
 
 /* Function used to customize uif.populateSelect() function
  */
-export function batteryInsert(element, json, item) {
+export function optionInsert(element, json, item) {
     const name = json[item].name;
     const type = item
     const option = document.createElement('option');
@@ -60,4 +60,12 @@ export function voltageInsert(element, json, item) {
     option.innerText = name;
     option.value = (numberOfCells);
     element.appendChild(option);
+}
+
+export function getBoats() {
+    return boat.boats;
+}
+
+export function getBoat(name) {
+    return boat.boats[name];
 }

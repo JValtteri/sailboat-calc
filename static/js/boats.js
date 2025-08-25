@@ -1,0 +1,147 @@
+/*
+ * Sailboat calc
+ * Boat data
+ */
+
+export const boats = {
+    "Hai": {
+        "name": "Hai",
+        "length": 9.6,
+        "waterline": 6.60,
+        "beam": 1.9,
+        "draft": 1.1,
+        "sa": 21.46,
+        "displacement": 1.700,
+        "ballast": 1.050
+    },
+    "H-vene": {
+        "name": "H-vene",
+        "length": 9.6,
+        "waterline": 6.60,
+        "beam": 1.9,
+        "draft": 1.1,
+        "sa": 21.46,
+        "displacement": 1.700,
+        "ballast": 1.050
+    },
+    "Rock 20": {
+        "name": "Rock 20",
+        "length": 7.17,
+        "waterline": 5.95,
+        "beam": 2.25,
+        "draft": 1.20,
+        "sa": 20.16,
+        "displacement": 1.750,
+        "ballast": 600
+    },
+    "470": {
+        "name": "470",
+        "length": 4.7,
+        "waterline": 4.44,
+        "beam": 1.68,
+        "draft": 0.97,
+        "sa": 12.73,
+        "displacement": 0.122,
+        "ballast": 0.05
+    },
+    "Lightning": {
+        "name": "Lightning",
+        "length": 5.79,
+        "waterline": 4.65,
+        "beam": 1.98,
+        "draft": 1.51,
+        "sa": 15.98,
+        "displacement": 0.318,
+        "ballast": 0.59
+    },
+    "Guy 27": {
+        "name": "Guy 27",
+        "length": 8.26,
+        "waterline": 6.40,
+        "beam": 2.63,
+        "draft": 1.60,
+        "sa": 24.90,
+        "displacement": 2.000,
+        "ballast": 850
+    },
+    "Folkboat (nordic)": {
+        "name": "Folkboat (nordic)",
+        "length": 7.68,
+        "waterline": 6.00,
+        "beam": 2.20,
+        "draft": 1.19,
+        "sa": 20.44,
+        "displacement": 1.930,
+        "ballast": 1000
+    },
+    "Mason 63": {
+        "name": "Mason 63",
+        "length": 19.38,
+        "waterline": 14.23,
+        "beam": 5.03,
+        "draft": 2.13,
+        "sa": 147.90,
+        "displacement": 29.211,
+        "ballast": 6.804
+    },
+    "Pelagic": {
+        "name": "Pelagic",
+        "length": 16.5,
+        "waterline": 14,
+        "beam": 4.5,
+        "draft": 3,
+        "sa": 145,
+        "displacement": 25.000,
+        "ballast": 7
+    },
+    "Pelagic Australis": {
+        "name": "Pelagic Australis",
+        "length": 22.5,
+        "waterline": 19.2,
+        "beam": 5.9,
+        "draft": 3.9,
+        "sa": 264,
+        "displacement": 48.410,
+        "ballast": 12000
+    },
+    "Baba 40": {
+        "name": "Baba 40",
+        "length": 12.14,
+        "waterline": 10.52,
+        "beam": 3.91,
+        "draft": 1.83,
+        "sa": 80.27,
+        "displacement": 13.154,
+        "ballast": 5.443
+    },
+    "Hallberg-Rassy 40": {
+        "name": "Hallberg-Rassy 40",
+        "length": 12.40,
+        "waterline": 10.60,
+        "beam": 3.82,
+        "draft": 1.99,
+        "sa": 80.80,
+        "displacement": 10.0,
+        "ballast": 4.1
+    },
+    "Tayana 42": {
+        "name": "Tayana 42",
+        "length": 12.72,
+        "waterline": 10.06,
+        "beam": 3.81,
+        "draft": 1.77,
+        "sa": 77.39,
+        "displacement": 13.225,
+        "ballast": 5.352
+    },
+    "Dynamic 35RC": {
+        "name": "Dynamic 35C",
+        "length": 10.68,
+        "waterline": 0,
+        "beam": 2.47,
+        "draft": 1.514,
+        "sa": 60,
+        "displacement": 2.925,
+        "ballast": 0
+    }
+}

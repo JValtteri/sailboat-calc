@@ -17,6 +17,12 @@ ui.clearBtn.addEventListener("click", () => {
     ui.clear();
 });
 
+/* Load button
+ */
+ui.loadBtn.addEventListener("click", () => {
+    ui.loadBoatSpecs(ui.boatLoad.value);
+});
+
 /* On Enter key
  */
 body.addEventListener('keydown', (event) => {
@@ -54,6 +60,7 @@ ui.draft.addEventListener("change", ui.update);
 ui.sailArea.addEventListener("change", ui.update);
 ui.displacement.addEventListener("change", ui.update);
 ui.ballast.addEventListener("change", ui.update);
+ui.boatLoad.addEventListener("change", ui.isLoadBtnEnabled);
 
 /* "Remember Me" clicked
  */
@@ -93,3 +100,4 @@ if (ui.cookieConsent.checked) {
 }
 
 ui.submit();
+ui.updateBoats();
