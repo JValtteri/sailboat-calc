@@ -1,11 +1,12 @@
 # ![icon](static/img/logo.png) Sailboat Calc
 
 Calculator for sailboat design ratios
-### Description
+
+## Description
 
 There are a few ratios sailboat aficionados are interested in. There are sources where these numbers can be found, but this calculator allows you to calculate the ratios for any boat and save the data for later use.
 
-Ratios given are:
+## Calculated ratios:
 
 - Sail area/Displacement
 	- Larger number indicates a sportier boat
@@ -33,6 +34,10 @@ Ratios given are:
 -  Hull speed (LOA)
 	- Some boats have large overhangs and their effective waterline increases when they heel over. This attempts to calculate the theoretical cap to this effect.
 
-### Disclaimers
+## Disclaimers
 
-The formulas were obtained from [sailboatdata.com](https://sailboatdata.com/). While the metric system used by the calculator would allow for much more straight forward formulas, to keep the numbers comparable with the popular site, various correction factors are used.
+The formulas were obtained from [sailboatdata.com](https://sailboatdata.com/). While the metric system used by the calculator would allow for much more straight forward formulas, to keep the numbers comparable with the popular site, various correction factors are used. 
+
+At times [sailboatdata.com](https://sailboatdata.com/) uses **inaccurate approximations** for their equations. A choise was made to replicate this to keep the numbers comparable. 
+
+Equation for the **S# Number** doens't give correct results. I've looked at multiple sources for the equation, but I haven't been able to replicate the results from [sailboatdata.com](https://sailboatdata.com/).
