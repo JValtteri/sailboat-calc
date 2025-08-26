@@ -131,6 +131,10 @@ button {
   align-items: center;
 }
 
+.buttons {
+  padding-top: 8px;
+  visibility: hidden;
+}
 
 .focused {
   background-color: #2e9f50;
@@ -155,6 +159,7 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  padding-top: 0px;
   font-size: 14px;
 }
 .footer-column {
@@ -181,6 +186,9 @@ footer {
   .footer-column {
       margin-bottom: 10px;
       width: auto;
+  }
+  .buttons {
+    visibility: visible;
   }
   .top-ui {
       flex-direction: column;

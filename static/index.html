@@ -15,11 +15,6 @@
                 <img src="img/logo.png" alt="battery logo">
                 <h1>Sailboat Calc</h1>
             </div>
-            <div class="buttons">
-                <button id="submit-button" class="focused">Calculate</button>
-                <button id="clear-button" disabled hidden>Clear</button>
-                <button id="fullscreen" class="fullscreen">Fullscreen</button>
-            </div>
             <div class="table-container">
                 <table>
                     <tr>
@@ -124,44 +119,34 @@
                         <td class="output" id="hullspeed-loa">-</td>
                     </tr>
                 </table>
-                <br>
             </div>
         </div>
     </div>
-
-    <br>
+    <div class="buttons footer-column">
+        <button id="submit-button" class="focused" hidden>Calculate</button>
+        <button id="clear-button" disabled hidden>Clear</button>
+        <button id="fullscreen" class="fullscreen">Fullscreen</button>
+    </div>
     <footer class="footer">
-        <div class="footer-column" hidden>
+        <div class="footer-column">
             <h4 class="footer-title">Source Code</h4>
             <a href="https://github.com/JValtteri/sailboat-calc" class="footer-text">github.com/JValtteri/sailboat-calc</a>
         </div>
-        <div class="footer-column" hidden>
+        <div class="footer-column">
             <h4 class="footer-title">Data Retention</h4>
-            <input type="checkbox" id="accept">Remember Me
+            <input type="checkbox" id="accept" hidden>
+            <div hidden>Remember Me</div>
             <div class="tooltip">
-                <span class="tooltip-trigger footer-text">Tell me more</span>
+                <span class="tooltip-trigger footer-text">About privacy</span>
                 <div class="tooltiptext">
                     <p>
-                        By checking the box "Remember Me", you allow your browser
-                        to save your calculations between sessions.
+                        This site <b>does not</b> use cookies.
                     </p>
                     <p>
-                        This is done by storing cookies containing the information you have
-                        submitted. The cookies are not used for any other purpose.
-                    </p>
-                    <p>
-                        You can remove your cookie consent any time by unchecking the
-                        "Remember Me" checkbox or clearing the cookies through your browser.
-                    </p>
-                    <p>
-                        The server collects anonymous statistics on requests made to follow the
-                        load on the server and to diagnose any problems. Logs disappear on every
-                        server restart.
+                        Any preferences saved are saved locally on your machine, in your browsers local storage.
                     </p>
                 </div>
             </div>
-            <p>
-            </p>
         </div>
     </footer>
 </body>
