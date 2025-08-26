@@ -8,30 +8,30 @@ There are a few ratios sailboat aficionados are interested in. There are sources
 
 ## Calculated ratios:
 
-- Sail area/Displacement
+- **Sail area/Displacement**
 	- Larger number indicates a sportier boat
 	- Cruisers are typically between 15-20
-- Ballast/Displacement
+- **Ballast/Displacement**
 	- The percentage of the boat that is ballast.
 	- More ballast typically is more stable
 	- More ballast enables better performance at higher winds
-- Displacement/Length
+- **Displacement/Length**
 	- Approximates the drag of the boat
 	- 150-200 glide easy
 	- 200-300 are heavy cruisers
 	- over 300 is very heavy
-- Comfort ratio
+- **Comfort ratio**
 	- 20+ Coastal cruiser
 	- 30+ Light bluewater cruiser
 	- 40+ Comfortable bluewater cruiser
-- Capsize screening index
+- **Capsize screening index**
 	- Smaller is better
 	- 2.0 or less is considered sufficient for bluewater and able to right itself after a capsize.
-- S# Performance number
+- **S# Performance number**
 	- A synthetic index that tries to predict the relative performance of boats of similar size.
-- Hull speed
+- **Hull speed**
 	- Maximum speed the boat can have without planing.
--  Hull speed (LOA)
+- **Hull speed (LOA)**
 	- Some boats have large overhangs and their effective waterline increases when they heel over. This attempts to calculate the theoretical cap to this effect.
 
 ## Disclaimers
