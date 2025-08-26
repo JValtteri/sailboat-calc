@@ -29,6 +29,12 @@ ui.saveBtn.addEventListener("click", () => {
     ui.saveBoat();
 });
 
+/* Delete button
+ */
+ui.deleteBtn.addEventListener("click", () => {
+    ui.deleteBoat();
+});
+
 /* On Enter key
  */
 body.addEventListener('keydown', (event) => {
@@ -59,16 +65,15 @@ ui.fullscreenBtn.addEventListener("click", () => {
 
 /* Any input value changed
  */
-ui.length.addEventListener("change", ui.update);
-ui.waterline.addEventListener("change", ui.update);
-ui.beam.addEventListener("change", ui.update);
-ui.draft.addEventListener("change", ui.update);
-ui.sailArea.addEventListener("change", ui.update);
-ui.displacement.addEventListener("change", ui.update);
-ui.ballast.addEventListener("change", ui.update);
-ui.boatLoad.addEventListener("change", ui.isLoadBtnEnabled);
-
-ui.boatName.addEventListener("input", ui.enableSave);
+ui.length.addEventListener("change", ui.onModify);
+ui.waterline.addEventListener("change", ui.onModify);
+ui.beam.addEventListener("change", ui.onModify);
+ui.draft.addEventListener("change", ui.onModify);
+ui.sailArea.addEventListener("change", ui.onModify);
+ui.displacement.addEventListener("change", ui.onModify);
+ui.ballast.addEventListener("change", ui.onModify);
+ui.boatLoad.addEventListener("change", ui.onSelect);        // Dropdown
+ui.boatName.addEventListener("input", ui.onText);       // Name field
 
 /* "Remember Me" clicked
  */

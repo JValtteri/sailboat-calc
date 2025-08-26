@@ -108,6 +108,7 @@ select {
   border-radius: 6px;
   padding: 2px;
   font-size: large;
+  width: 130px;
 }
 
 .num-input {

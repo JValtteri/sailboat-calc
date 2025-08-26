@@ -44,6 +44,7 @@ export const clearBtn      = document.getElementById('clear-button');
 export const fullscreenBtn = document.getElementById("fullscreen");
 export const loadBtn       = document.getElementById("load");
 export const saveBtn       = document.getElementById("save");
+export const deleteBtn     = document.getElementById("delete");
 
 
 /* Toggle Fullscreen On or Off
@@ -69,9 +70,12 @@ export function makeFullscreen() {
     }
 }
 
-export function isLoadBtnEnabled() {
+export function onSelect() {
+    deleteBtn.setAttribute("hidden", "");
+    loadBtn.removeAttribute("hidden");
     if (boatLoad.value === "") {
         loadBtn.setAttribute("disabled", "");
+        return;
     } else {
         loadBtn.removeAttribute("disabled");
     }
@@ -93,8 +97,10 @@ export function deactivateUI() {
 
 /* Enable Save button
  */
-export function enableSave() {
+export function onText() {
     saveBtn.removeAttribute("disabled");
+    deleteBtn.setAttribute("hidden", "");
+    loadBtn.removeAttribute("hidden");
 }
 
 /* Used for the first time calculation
@@ -129,6 +135,14 @@ export function loadBoatSpecs(name) {
     ballast.value       = boat["ballast"];
     update();
     loadBtn.setAttribute("disabled", "");
+    if (boats[boatLoad.value]["local"]) {
+        loadBtn.setAttribute("hidden", "");
+        deleteBtn.removeAttribute("hidden");
+        deleteBtn.removeAttribute("disabled");
+    } else {
+        deleteBtn.setAttribute("hidden", "");
+        loadBtn.removeAttribute("hidden");
+    }
 }
 
 /* Update boat selection Dropdown
@@ -144,9 +158,14 @@ export function updateBoats() {
     // Enable Load Button
 }
 
+export function onModify() {
+    saveBtn.removeAttribute("disabled");
+    update();
+}
+
 /* Updates all calculations
  */
-export function update() {
+function update() {
     updateInputs();
     if (calculated) {
         updateSaDisp();
@@ -185,6 +204,15 @@ export function saveBoat() {
     saveBtn.setAttribute("disabled", "");
     util.saveToLocal(localBoats);
     updateBoats();
+}
+
+export function deleteBoat() {
+    const boat = boatLoad.value;
+    delete localBoats[boat];
+    util.saveToLocal(localBoats);
+    updateBoats();
+    deleteBtn.setAttribute("hidden", "");
+    loadBtn.removeAttribute("hidden");
 }
 
 function updateSaDisp() {
