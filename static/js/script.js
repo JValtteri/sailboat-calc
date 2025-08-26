@@ -32,7 +32,9 @@ ui.saveBtn.addEventListener("click", () => {
 /* Delete button
  */
 ui.deleteBtn.addEventListener("click", () => {
-    ui.deleteBoat();
+    if (confirm(`Are you sure you want to delete Boat '${ui.boatLoad.value}'?`)) {
+        ui.deleteBoat();
+    }
 });
 
 /* On Enter key
