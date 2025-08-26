@@ -23,6 +23,12 @@ ui.loadBtn.addEventListener("click", () => {
     ui.loadBoatSpecs(ui.boatLoad.value);
 });
 
+/* Save button
+ */
+ui.saveBtn.addEventListener("click", () => {
+    ui.saveBoat();
+});
+
 /* On Enter key
  */
 body.addEventListener('keydown', (event) => {
@@ -61,6 +67,8 @@ ui.sailArea.addEventListener("change", ui.update);
 ui.displacement.addEventListener("change", ui.update);
 ui.ballast.addEventListener("change", ui.update);
 ui.boatLoad.addEventListener("change", ui.isLoadBtnEnabled);
+
+ui.boatName.addEventListener("input", ui.enableSave);
 
 /* "Remember Me" clicked
  */

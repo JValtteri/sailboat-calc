@@ -62,10 +62,26 @@ export function voltageInsert(element, json, item) {
     element.appendChild(option);
 }
 
+/* Returns server boats JSON
+ */
 export function getBoats() {
     return boat.boats;
 }
 
-export function getBoat(name) {
-    return boat.boats[name];
+/* Returns local boats JSON
+ */
+export function loadLocalBoats() {
+    let json = JSON.parse(localStorage.getItem("local_boats"));
+    if (json === null) {
+        return {};
+    }
+    return json;
 }
+
+/* Saves a boat to local JSON
+ */
+export function saveToLocal(json) {
+    localStorage.setItem("local_boats", JSON.stringify(json));
+}
+
+

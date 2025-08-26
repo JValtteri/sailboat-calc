@@ -6,6 +6,7 @@ import * as util from "./utils.js"
 import * as calc from "./calc.js"
 
 export const body                 = document.getElementById('body');
+
 // Inputs
 export const boatName           = document.getElementById('boat-name');
 export const boatLoad           = document.getElementById('boat-load');
@@ -33,8 +34,9 @@ const sfactor                   = document.getElementById('s-factor');
 export const outputTable        = document.getElementById("output");
 
 // Variables
-
 let calculated = false;
+let boats      = null;   // Merged JSON object of local and server boats
+let localBoats = null;     //JSON object of local boats
 
 // Buttons
 export const submitButton  = document.getElementById("submit-button");
@@ -89,6 +91,12 @@ export function deactivateUI() {
     outputTable.setAttribute("hidden", "");
 }
 
+/* Enable Save button
+ */
+export function enableSave() {
+    saveBtn.removeAttribute("disabled");
+}
+
 /* Used for the first time calculation
  * Activates the UI and
  * Updates all calculations
@@ -107,8 +115,10 @@ export function clear() {
     calculated = false;
 }
 
+/* Load specific boats specs
+ */
 export function loadBoatSpecs(name) {
-    const boat          = util.getBoat(name);
+    let boat = boats[name];
     boatName.value      = boat["name"];
     length.value        = boat["length"];
     waterline.value     = boat["waterline"];
@@ -121,14 +131,16 @@ export function loadBoatSpecs(name) {
     loadBtn.setAttribute("disabled", "");
 }
 
+/* Update boat selection Dropdown
+ */
 export function updateBoats() {
     const element = boatLoad;
-    util.clearOptions(element);
-    addSelect(element);
-    const localBoats = loadLocalBoats();
+    util.clearOptions(element);                             // Clear initialize dropdown menu
+    addSelect(element);                                     // Add null option
+    localBoats = loadLocalBoats();
     const serverBoats = loadServerBoats();
-    util.populateSelect(element, localBoats, util.optionInsert);
-    util.populateSelect(element, serverBoats, util.optionInsert);
+    boats = {...serverBoats, ...localBoats};                // Merge local and server boats
+    util.populateSelect(element, boats, util.optionInsert);
     // Enable Load Button
 }
 
@@ -148,6 +160,31 @@ export function update() {
         //color.removeColors();         // Remove any old colors
         //color.setColors();            // Set new colors
     }
+}
+
+/* Load data of the given boat
+ */
+export function loadBoat(name) {
+    return boats[name];
+}
+
+/* Save the current boat with the current name
+ */
+export function saveBoat() {
+    localBoats[boatName.value]                  = {};
+    localBoats[boatName.value]["name"]          = boatName.value;
+    localBoats[boatName.value]["length"]        = length.value;
+    localBoats[boatName.value]["waterline"]     = waterline.value;
+    localBoats[boatName.value]["beam"]          = beam.value;
+    localBoats[boatName.value]["draft"]         = draft.value;
+    localBoats[boatName.value]["sa"]            = sailArea.value;
+    localBoats[boatName.value]["displacement"]  = displacement.value;
+    localBoats[boatName.value]["ballast"]       = ballast.value;
+    localBoats[boatName.value]["local"]         = true;
+    loadBtn.setAttribute("disabled", "");
+    saveBtn.setAttribute("disabled", "");
+    util.saveToLocal(localBoats);
+    updateBoats();
 }
 
 function updateSaDisp() {
@@ -192,7 +229,7 @@ function updateInputs() {
 
 // Parse local storage to load boats to list
 function loadLocalBoats() {
-    console.log("local storage not implemented")
+    return util.loadLocalBoats();
 }
 
 // Load boats from static json
