@@ -6,6 +6,8 @@ Calculator for sailboat design ratios
 
 There are a few ratios sailboat aficionados are interested in. There are sources where these numbers can be found, but this calculator allows you to calculate the ratios for any boat and save the data for later use.
 
+![screenshot](static/img/screenshot.png)
+
 ## Calculated ratios:
 
 - **Sail area/Displacement**
@@ -36,8 +38,8 @@ There are a few ratios sailboat aficionados are interested in. There are sources
 
 ## Disclaimers
 
-The formulas were obtained from [sailboatdata.com](https://sailboatdata.com/). While the metric system used by the calculator would allow for much more straight forward formulas, to keep the numbers comparable with the popular site, various correction factors are used. 
+The formulas were obtained from [sailboatdata.com](https://sailboatdata.com/). While the metric system used by the calculator would allow for much more straight forward formulas, to keep the numbers comparable with the popular site, various correction factors are used.
 
-At times [sailboatdata.com](https://sailboatdata.com/) uses **inaccurate approximations** for their equations. A choise was made to replicate this to keep the numbers comparable. 
+At times [sailboatdata.com](https://sailboatdata.com/) uses **inaccurate approximations** for their equations. A choise was made to replicate this to keep the numbers comparable.
 
 Equation for the **S# Number** doens't give correct results. I've looked at multiple sources for the equation, but I haven't been able to replicate the results from [sailboatdata.com](https://sailboatdata.com/).
