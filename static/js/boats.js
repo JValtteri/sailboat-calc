@@ -62,7 +62,7 @@ export const boats = {
         "draft": 1.60,
         "sa": 24.90,
         "displacement": 2.000,
-        "ballast": 850
+        "ballast": 0.850
     },
     "Folkboat (nordic)": {
         "name": "Folkboat (nordic)",
@@ -102,7 +102,7 @@ export const boats = {
         "draft": 3.9,
         "sa": 264,
         "displacement": 48.410,
-        "ballast": 12000
+        "ballast": 12.000
     },
     "Baba 40": {
         "name": "Baba 40",
@@ -137,7 +137,7 @@ export const boats = {
     "Dynamic 35RC": {
         "name": "Dynamic 35RC",
         "length": 10.68,
-        "waterline": 0,
+        "waterline": 9.91,
         "beam": 2.47,
         "draft": 1.514,
         "sa": 60,
