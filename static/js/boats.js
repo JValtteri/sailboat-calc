@@ -16,13 +16,13 @@ export const boats = {
     },
     "H-vene": {
         "name": "H-vene",
-        "length": 9.6,
+        "length": 8.31,
         "waterline": 6.60,
-        "beam": 1.9,
-        "draft": 1.1,
-        "sa": 21.46,
-        "displacement": 1.700,
-        "ballast": 1.050
+        "beam": 2.19,
+        "draft": 1.32,
+        "sa": 24.53,
+        "displacement": 1.447,
+        "ballast": 0.723
     },
     "Rock 20": {
         "name": "Rock 20",
@@ -135,7 +135,7 @@ export const boats = {
         "ballast": 5.352
     },
     "Dynamic 35RC": {
-        "name": "Dynamic 35C",
+        "name": "Dynamic 35RC",
         "length": 10.68,
         "waterline": 0,
         "beam": 2.47,
@@ -143,5 +143,36 @@ export const boats = {
         "sa": 60,
         "displacement": 2.925,
         "ballast": 0
+    },
+    "Swan 65 Ketch (1972)": {
+        "name": "Swan 65 Ketch (1972)",
+        "length": 19.68,
+        "waterline": 14.33,
+        "beam": 4.96,
+        "draft": 2.93,
+        "sa": 167.04,
+        "displacement": 31.751,
+        "ballast": 13.880
+    },
+    "Rustler 36": {
+        "name": "Rustler 36",
+        "length": 10.77,
+        "waterline": 8.21,
+        "beam": 3.35,
+        "draft": 1.68,
+        "sa": 64.38,
+        "displacement": 7.623,
+        "ballast": 3.456
+    },
+    "Gaia 36": {
+        "name": "Gaia 36",
+        "length": 10.97,
+        "waterline": 7.77,
+        "beam": 2.95,
+        "draft": 1.83,
+        "sa": 50.17,
+        "displacement": 6.985,
+        "ballast": 3.538
     }
+
 }
