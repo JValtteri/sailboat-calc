@@ -2,7 +2,7 @@
  * Miscellanious functions
  */
 
-import * as boat from "./boats.js"
+import * as boat from "./boats.js?id=MTc1NjI3OTQxOQ"
 
 /*
  * Low level page manipulation functions

@@ -32,7 +32,7 @@ export const boats = {
         "draft": 1.20,
         "sa": 20.16,
         "displacement": 1.750,
-        "ballast": 600
+        "ballast": 0.600
     },
     "470": {
         "name": "470",
@@ -54,6 +54,16 @@ export const boats = {
         "displacement": 0.318,
         "ballast": 0.59
     },
+    "Optimist": {
+        "name": "Optimist",
+        "length": 2.34,
+        "waterline": 2.16,
+        "beam": 1.07,
+        "draft": 0.97,
+        "sa": 3.3,
+        "displacement": 0.035,
+        "ballast": 0.03
+    },
     "Guy 27": {
         "name": "Guy 27",
         "length": 8.26,
@@ -72,7 +82,7 @@ export const boats = {
         "draft": 1.19,
         "sa": 20.44,
         "displacement": 1.930,
-        "ballast": 1000
+        "ballast": 1.000
     },
     "Mason 63": {
         "name": "Mason 63",
@@ -173,6 +183,15 @@ export const boats = {
         "sa": 50.17,
         "displacement": 6.985,
         "ballast": 3.538
-    }
-
+    },
+    "Cutty Sark": {
+        "name": "Cutty Sark",
+        "length": 64.77,
+        "waterline": 56.5,
+        "beam": 10.97,
+        "draft": 6.1,
+        "sa": 3000,
+        "displacement": 2133.7,
+        "ballast": 1000
+    },
 }
