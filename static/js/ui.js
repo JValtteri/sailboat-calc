@@ -101,6 +101,7 @@ export function onText() {
     saveBtn.removeAttribute("disabled");
     deleteBtn.setAttribute("hidden", "");
     loadBtn.removeAttribute("hidden");
+    loadBtn.removeAttribute("disabled");
 }
 
 /* Used for the first time calculation
@@ -135,6 +136,7 @@ export function loadBoatSpecs(name) {
     ballast.value       = boat["ballast"];
     update();
     loadBtn.setAttribute("disabled", "");
+    saveBtn.setAttribute("disabled", "");
     if (boats[boatLoad.value]["local"]) {
         loadBtn.setAttribute("hidden", "");
         deleteBtn.removeAttribute("hidden");
@@ -160,6 +162,9 @@ export function updateBoats() {
 
 export function onModify() {
     saveBtn.removeAttribute("disabled");
+    deleteBtn.setAttribute("hidden", "");
+    loadBtn.removeAttribute("hidden");
+    loadBtn.removeAttribute("disabled");
     update();
 }
 

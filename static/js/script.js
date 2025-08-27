@@ -1,5 +1,5 @@
 import * as cookie from "./cookie.js"
-import * as ui from "./ui.js"
+import * as ui from "./ui.js?id=MTc1NjI4MTUwOQ"
 
 /*
  * Buttons Event Listeners
