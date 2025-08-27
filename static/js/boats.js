@@ -194,4 +194,34 @@ export const boats = {
         "displacement": 2133.7,
         "ballast": 1000
     },
+    "Hanse 418": {
+        "name": "Hanse 418",
+        "length": 12.4,
+        "waterline": 11.4,
+        "beam": 4.17,
+        "draft": 2.07,
+        "sa": 84.01,
+        "displacement": 10.150,
+        "ballast": 2.860
+    },
+    "Mason Sunward 48": {
+        "name": "Mason Sunward 48",
+        "length": 14.63,
+        "waterline": 11.73,
+        "beam": 4.34,
+        "draft": 1.7,
+        "sa": 101.36,
+        "displacement": 22.680,
+        "ballast": 7.484
+    },
+    "CNB 66 (SV Escape)": {
+        "name": "CNB 66 (SV Escape)",
+        "length": 20.61,
+        "waterline": 18.45,
+        "beam": 5.51,
+        "draft": 2.95,
+        "sa": 189.97,
+        "displacement": 31.1,
+        "ballast": 9.350
+    },
 }
